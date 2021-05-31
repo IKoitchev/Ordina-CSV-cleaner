@@ -1,0 +1,10 @@
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\bin\Debug\CSVcleaner.exe.config
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\bin\Debug\CSVcleaner.exe
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\bin\Debug\CSVcleaner.pdb
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\obj\Debug\CSVcleaner.csprojAssemblyReference.cache
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\obj\Debug\CSVcleaner.Form1.resources
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\obj\Debug\CSVcleaner.Properties.Resources.resources
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\obj\Debug\CSVcleaner.csproj.GenerateResource.cache
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\obj\Debug\CSVcleaner.csproj.CoreCompileInputs.cache
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\obj\Debug\CSVcleaner.exe
+C:\Users\ivan_\source\repos\CSVcleaner\CSVcleaner\obj\Debug\CSVcleaner.pdb
