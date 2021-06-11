@@ -31,17 +31,28 @@ namespace CSVcleaner
             fullPath = openFileDialog.FileName;
             nameOnly = openFileDialog.SafeFileName;
 
-            cleaner = new Cleaner(fullPath, nameOnly);
+            if (string.IsNullOrEmpty(fullPath))
+                MessageBox.Show("No file selected");
 
-            this.lblLoadedFile.Text = nameOnly;
-
+            else
+            {
+                cleaner = new Cleaner(fullPath, nameOnly);
+                this.lblLoadedFile.Text = nameOnly;
+                this.btnCleanFile.Enabled = true;
+            }
         }
 
         private void BtnCleanFile_Click(object sender, EventArgs e)
         {
-            lblLoading.Text = "Loading ... ";
+            
+            lblLoading.Text = "Processing ... ";
+            
             cleaner.CleanFile();
-            lblLoading.Text = "";
+            lblLoading.Text = "Cleaning Process Finished. You can now select a new file.";
+            this.btnCleanFile.Enabled = false;
+
         }
+
+       
     }
 }

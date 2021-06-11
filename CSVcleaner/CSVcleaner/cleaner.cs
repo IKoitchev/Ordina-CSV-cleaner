@@ -28,12 +28,22 @@ namespace CSVcleaner
         public void LoadFile(string path)
         {
             sr = new StreamReader(path);
-            outputFile = new StreamWriter(Path.Combine(path.Replace(this.fileName, ""),  fileName.Substring(0, fileName.Length - 4) + ".xml"), true);
+
+            string newFileName = fileName.Substring(0, fileName.Length - 4) + ".xml";
+            string newFilePath = Path.Combine(path.Replace(this.fileName, ""), newFileName);
+
+
+            if (File.Exists(newFilePath) )
+            {
+                File.Delete(newFilePath);
+            }
+
+            outputFile = new StreamWriter(newFilePath, true);
 
         }
         public void CleanFile()
         {
-            
+            AutoClosingMessageBox.Show("Cleaning process has been initiated", "Update", 3000);
             int lineCount = 0;
             while (!sr.EndOfStream) // trim the lines 
             {
@@ -55,8 +65,8 @@ namespace CSVcleaner
                 // breaking has to be done manually because empty lines are read as ",," and the reading of the file will continue
 
 
-                if (lineCount % 60000 == 0 && lineCount != 0)
-                    MessageBox.Show(lineCount.ToString() + " lines cleaned");
+                if (lineCount % 30000 == 0 && lineCount != 0) 
+                    AutoClosingMessageBox.Show(lineCount + " lines cleaned", "Update", 2000);
 
 
 
